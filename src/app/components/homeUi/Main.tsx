@@ -35,10 +35,10 @@ import Logo from "../../../../public/main.png";
                </p>
 
               <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-                <button className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm  outline-none ring-indigo-300  text-white font-semibold  sm:px-6 sm:py-3  transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 text-sm sm:text-base">
+                <button className="inline-block rounded-lg bg-[#00A3FF] px-8 py-3 text-center text-lg   text-white font-semibold  sm:px-6 sm:py-3  transition-all duration-300">
                   Join Group
                 </button>
-                <button className="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base">
+                <button className="inline-block rounded-lg bg-[#202E48] px-8 py-3 text-center text-lg   text-white font-semibold  sm:px-6 sm:py-3  transition-all duration-300">
                   About Us
                 </button>
               </div>
