@@ -93,7 +93,7 @@ interface SectionProps {
   heading: string;
   subheading: string;
   description: string;
-  features: { svg: any; title: string; description: string }[];
+  features: { svg: string; title: string; description: string }[];
   reverse?: boolean;
 }
 
