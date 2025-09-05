@@ -14,8 +14,8 @@ export default function About() {
               About <span className="text-[#00A3FF]">NSG</span>
             </h1>
             <p className="text-[#AEAEAE] max-md:text-center">
-              On a mission to accelerate the world’s transition to sustainable
-              money.
+              On a mission to accelerate the world&rsquo;s transition to
+              sustainable money.
             </p>
           </div>
         </div>
@@ -56,9 +56,9 @@ export default function About() {
                   We have developed a new type of monetary system that directly
                   interfaces with the patchwork of traditional currencies
                   susceptible to inflation, weakening value and shortcut
-                  channels to today's third parties. When more and more money is
-                  printed and the value of that currency is eroded, economies
-                  and individuals are left out after this happens once.
+                  channels to today&rsquo;s third parties. When more and more
+                  money is printed and the value of that currency is eroded,
+                  economies and individuals are left out after this happens once.
                 </p>
               </div>
 
@@ -67,13 +67,13 @@ export default function About() {
                   Lorem Ipsum
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book. It has survived
-                  not only five centuries, but also the leap into electronic
-                  typesetting, remaining essentially unchanged. It was
-                  popularised in the 1960s with the release of Letraset sheets
-                  containing Lorem Ipsum passages, and more recently with
+                  Lorem Ipsum has been the industry&apos;s standard dummy text
+                  ever since the 1500s, when an unknown printer took a galley of
+                  type and scrambled it to make a type specimen book. It has
+                  survived not only five centuries, but also the leap into
+                  electronic typesetting, remaining essentially unchanged. It
+                  was popularised in the 1960s with the release of Letraset
+                  sheets containing Lorem Ipsum passages, and more recently with
                   desktop publishing software like Aldus PageMaker including
                   versions of Lorem Ipsum.
                 </p>
@@ -88,8 +88,8 @@ export default function About() {
               Precious Metals
             </h2>
             <p className="text-gray-300 leading-relaxed max-w-4xl mx-auto">
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
+              Lorem Ipsum has been the industry&apos;s standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not
               only five centuries, but also the leap into electronic
               typesetting, remaining essentially unchanged. It was popularised
@@ -101,50 +101,49 @@ export default function About() {
 
           {/* Contact Information Section */}
           <div className="grid md:grid-cols-3 gap-8">
-  {/* Name and Address */}
-  <div className="text-center bg-[#25243459] rounded-xl p-10">
-    <div className="flex flex-col">
-      <div className="flex justify-center mb-4">
-        <Image src={Home} width={50} height={50} alt="Address" />
-      </div>
-      <h3 className="text-xl font-semibold mb-3 text-white">
-        Name and address
-      </h3>
-      <p className="text-gray-300">
-        Name and address, name and <br />
-        address name and address
-      </p>
-    </div>
-  </div>
+            {/* Name and Address */}
+            <div className="text-center bg-[#25243459] rounded-xl p-10">
+              <div className="flex flex-col">
+                <div className="flex justify-center mb-4">
+                  <Image src={Home} width={50} height={50} alt="Address" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  Name and address
+                </h3>
+                <p className="text-gray-300">
+                  Name and address, name and <br />
+                  address name and address
+                </p>
+              </div>
+            </div>
 
-  {/* CEO */}
-  <div className="text-center bg-[#25243459] rounded-xl p-10">
-    <div className="flex flex-col">
-      <div className="flex justify-center mb-4">
-        <Image src={person} width={50} height={50} alt="CEO" />
-      </div>
-      <h3 className="text-xl font-semibold mb-3 text-white">CEO</h3>
-      <p className="text-gray-300">Chris Rodriguez</p>
-    </div>
-  </div>
+            {/* CEO */}
+            <div className="text-center bg-[#25243459] rounded-xl p-10">
+              <div className="flex flex-col">
+                <div className="flex justify-center mb-4">
+                  <Image src={person} width={50} height={50} alt="CEO" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">CEO</h3>
+                <p className="text-gray-300">Chris Rodriguez</p>
+              </div>
+            </div>
 
-  {/* Contact Information */}
-  <div className="text-center bg-[#25243459] rounded-xl p-10">
-    <div className="flex flex-col">
-      <div className="flex justify-center mb-4">
-        <Image src={phone} width={50} height={50} alt="Contact" />
-      </div>
-      <h3 className="text-xl font-semibold mb-3 text-white">
-        Contact Information
-      </h3>
-      <p className="text-gray-300">
-        +1 617 3600 0166 <br />
-        northstargroup@gmail.com
-      </p>
-    </div>
-  </div>
-</div>
-
+            {/* Contact Information */}
+            <div className="text-center bg-[#25243459] rounded-xl p-10">
+              <div className="flex flex-col">
+                <div className="flex justify-center mb-4">
+                  <Image src={phone} width={50} height={50} alt="Contact" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  Contact Information
+                </h3>
+                <p className="text-gray-300">
+                  +1 617 3600 0166 <br />
+                  northstargroup@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
