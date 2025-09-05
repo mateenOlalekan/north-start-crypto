@@ -10,7 +10,7 @@ export default function About() {
         {/* Header Section */}
         <div className="flex justify-center items-center w-full bg-[#25243459]">
           <div className="flex flex-col py-18 lg:py-28 md:py-24 ">
-            <h1 className="text-3xl lg:text-4xl md:text-5xl mb-4 text-center">
+            <h1 className="text-3xl lg:text-4xl md:text-5xl mb-4 text-white text-center">
               About <span className="text-[#00A3FF]">NSG</span>
             </h1>
             <p className="text-[#AEAEAE] max-md:text-center">
