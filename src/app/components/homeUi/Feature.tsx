@@ -3,8 +3,7 @@ import shape1 from "../../../../public/shape-3.svg";
 import shape2 from "../../../../public/shape-4.svg";
 import shape3 from "../../../../public/shape-6.svg";
 import shape4 from "../../../../public/shape-7.svg";
-import section from "../../../../public/section.png";
-import Image from "next/image";
+
 
 const features = [
   {

@@ -3,7 +3,6 @@ import workplace from "../../../../public/workplace.svg";
 import mobile from "../../../../public/mobile.svg";
 import credit from "../../../../public/credit.svg";
 import section from "../../../../public/section.png";
-import bgImage from "../../../../public/About.jpg";
 import Image from "next/image";
 
 const moreCards = [
