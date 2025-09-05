@@ -1,10 +1,34 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../../public/logo.svg";
+import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
+  const [showScroll, setShowScroll] = useState(false);
+
+  // Show button when scrolling down
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="w-full bg-[#1B1B27] border-t border-gray-800">
+    <footer className="w-full bg-[#1B1B27] border-t border-gray-800 relative">
       <div className="flex flex-col py-12">
         {/* Section Header */}
         <div className="w-full max-w-screen-xl mx-auto px-4">
@@ -19,7 +43,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Image
-                src={Logo}
+                src="public/logo.svg"
                 alt="Site Logo"
                 width={70}
                 height={70}
@@ -119,22 +143,19 @@ export default function Footer() {
         <div className="w-full max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 pt-10 border-t border-gray-800">
           {/* Subscribe */}
           <div className="md:col-span-2">
-            <div className="md:col-span-1">
             <h2 className="font-semibold text-white mb-4 text-sm md:text-base">
               Get The Latest Updates
             </h2>
-            <div className="flex   w-full">
+            <div className="flex w-full">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="col-span-1 text-white  text-sm md:text-base bg-[#13131D] border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="text-white text-sm md:text-base bg-[#13131D] border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
               />
-              <button className="col-span-2 bg-[#00A3FF] text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition text-sm md:text-base">
+              <button className="ml-2 bg-[#00A3FF] text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition text-sm md:text-base">
                 Subscribe
               </button>
             </div>
-            </div>
-
           </div>
 
           {/* Downloads & Support */}
@@ -186,26 +207,35 @@ export default function Footer() {
 
         {/* Bottom Copyright */}
         <div className="w-full max-w-screen-xl mx-auto px-4 mt-10 border-t border-gray-800 pt-6">
-  <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-between items-center gap-3 text-center sm:text-left">
-    <p className="text-xs md:text-sm text-gray-500">
-      © 2025 North Star Group
-    </p>
-    <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
-      Terms of Use
-    </p>
-    <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
-      Privacy Policy
-    </p>
-    <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
-      Offering Memorandum PDF
-    </p>
-    <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
-      Cashback Terms
-    </p>
-  </div>
-</div>
-
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-between items-center gap-3 text-center sm:text-left">
+            <p className="text-xs md:text-sm text-gray-500">
+              © 2025 North Star Group
+            </p>
+            <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
+              Terms of Use
+            </p>
+            <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
+              Privacy Policy
+            </p>
+            <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
+              Offering Memorandum PDF
+            </p>
+            <p className="text-xs md:text-sm text-gray-500 cursor-pointer hover:text-white transition">
+              Cashback Terms
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* Scroll to Top Button */}
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition"
+        >
+          <ArrowUp size={20} />
+        </button>
+      )}
     </footer>
   );
 }

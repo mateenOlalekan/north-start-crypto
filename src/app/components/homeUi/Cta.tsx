@@ -2,11 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import goldIcon from "../../../../public/Grid/gold.svg";
-import silverIcon from "../../../../public/Grid/silver.svg";
-import nsgIcon from "../../../../public/Grid/coins.svg";
 import { ChevronDown } from "lucide-react";
-import cta from "../../../../public/Grid/cta.jpg";
+
 
 interface FAQItem {
   question: string;
@@ -41,7 +38,7 @@ export default function WealthSection() {
       <div className="relative w-full h-40 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-xl overflow-hidden mx-auto">
   {/* Image */}
   <Image
-    src={cta}
+    src="/Grid/cta.jpg"
     alt="Call to action"
     fill
     className="object-cover"
@@ -84,7 +81,7 @@ export default function WealthSection() {
 
             {/* Card 1 */}
             <div className="flex items-center gap-4 p-4 sm:p-5 bg-[#1A1C27] rounded-lg">
-              <Image src={goldIcon} alt="Gold" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10" />
+              <Image src="/Grid/gold.svg" alt="Gold" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10" />
               <div className="flex-1">
                 <h3 className="text-white font-semibold text-sm sm:text-base md:text-lg">Gold</h3>
                 <p className="text-gray-400 text-xs sm:text-sm md:text-base">
@@ -98,7 +95,7 @@ export default function WealthSection() {
 
             {/* Card 2 */}
             <div className="flex items-center gap-4 p-4 sm:p-5 bg-[#1A1C27] rounded-lg">
-              <Image src={silverIcon} alt="Silver" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10" />
+              <Image src="/Grid/silver.svg" alt="Silver" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10" />
               <div className="flex-1">
                 <h3 className="text-white font-semibold text-sm sm:text-base md:text-lg">Silver</h3>
                 <p className="text-gray-400 text-xs sm:text-sm md:text-base">
@@ -112,7 +109,7 @@ export default function WealthSection() {
 
             {/* Card 3 */}
             <div className="flex items-center gap-4 p-4 sm:p-5 bg-[#1A1C27] rounded-lg">
-              <Image src={nsgIcon} alt="NSG" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10" />
+              <Image src='/Grid/coins.svg' alt="NSG" width={40} height={40} className="w-8 h-8 sm:w-10 sm:h-10" />
               <div className="flex-1">
                 <h3 className="text-white font-semibold text-sm sm:text-base md:text-lg">NSG</h3>
                 <p className="text-gray-400 text-xs sm:text-sm md:text-base">

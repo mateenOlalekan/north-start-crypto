@@ -7,6 +7,9 @@
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background, #13131D);
   font-family: var(--font-poppins), var(--font-jost), sans-serif;

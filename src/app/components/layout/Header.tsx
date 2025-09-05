@@ -4,29 +4,30 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import Logo from "../../../../public/logo.svg";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Investor", href: "/investor" },
-  { name: "Product", href: "/product" },
-  { name: "RoadMap", href: "/roadmap" },
+  { name: "Investor", href: "/" },
+  { name: "Product", href: "/" },
+  { name: "RoadMap", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Support", href: "/support" },
+  { name: "Support", href: "/" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full ">
+    <header className="w-full">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-10 py-2 md:py-2">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src={Logo}
+            src="/logo.svg"
             alt="Site Logo"
             priority
+            width={50}
+            height={50}
             className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
           />
         </Link>
@@ -75,7 +76,7 @@ export default function Header() {
 
       {/* Mobile Navigation - Sliding Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 sm:w-60 bg-[#202E48] shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 right-0 h-full w-48 sm:w-56 bg-[#13131D] shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

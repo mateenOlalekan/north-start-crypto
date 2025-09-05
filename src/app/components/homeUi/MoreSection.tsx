@@ -1,23 +1,20 @@
 import MoreCard from "./MoreCard";
-import workplace from "../../../../public/workplace.svg";
-import mobile from "../../../../public/mobile.svg";
-import credit from "../../../../public/credit.svg";
-import section from "../../../../public/section.png";
 import Image from "next/image";
 
+// ✅ use /public paths directly
 const moreCards = [
   {
-    img: workplace,
+    img: "/workplace.svg",
     title: "NSG Money Platform",
     desc: "Keep track of everyday spending. Build your wealth in gold and silver.",
   },
   {
-    img: mobile,
+    img: "/mobile.svg",
     title: "NSG Mobile App",
     desc: "Take care of your finances on the move. Buy gold, silver and digital currency.",
   },
   {
-    img: credit,
+    img: "/credit.svg",
     title: "NSG Card",
     desc: "Spend gold, silver and digital currency globally.",
   },
@@ -51,10 +48,12 @@ export default function MoreSection() {
 
       {/* Mobile App Section */}
       <div className="mt-16 md:mt-20 lg:mt-24 w-full flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-stretch">
-        {/* Left Content - Now with matching height */}
+        {/* Left Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div className="mb-6 md:mb-8">
-            <p className="text-[#00A3FF] text-sm sm:text-base md:text-lg font-medium mb-4 md:mb-6">Mobile App</p>
+            <p className="text-[#00A3FF] text-sm sm:text-base md:text-lg font-medium mb-4 md:mb-6">
+              Mobile App
+            </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 md:mb-8 lg:mb-10">
               One app for everything
             </h2>
@@ -67,7 +66,9 @@ export default function MoreSection() {
           {/* Card 1 */}
           <div className="flex items-center bg-[#252434] rounded-lg p-4 sm:p-5 md:p-6 mb-6 md:mb-8">
             <div className="flex flex-col">
-              <h2 className="font-bold text-lg sm:text-xl md:text-2xl text-white mb-2">Stay Connected</h2>
+              <h2 className="font-bold text-lg sm:text-xl md:text-2xl text-white mb-2">
+                Stay Connected
+              </h2>
               <p className="text-[#AEAEAE] text-sm sm:text-base">
                 Manage your spending, alongside your investments, wherever you are.
               </p>
@@ -77,7 +78,9 @@ export default function MoreSection() {
           {/* Card 2 */}
           <div className="flex items-center bg-[#252434] rounded-lg p-4 sm:p-5 md:p-6">
             <div className="flex flex-col">
-              <h2 className="font-bold text-lg sm:text-xl md:text-2xl text-white mb-2">Take an opportunity</h2>
+              <h2 className="font-bold text-lg sm:text-xl md:text-2xl text-white mb-2">
+                Take an opportunity
+              </h2>
               <p className="text-[#AEAEAE] text-sm sm:text-base">
                 Buy gold, silver and digital currency in seconds, 24/7, or set your own price.
               </p>
@@ -85,11 +88,11 @@ export default function MoreSection() {
           </div>
         </div>
 
-        {/* Right Image - Now matching left side height */}
+        {/* Right Image */}
         <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex items-center">
           <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[550px] rounded-xl overflow-hidden">
             <Image
-              src={section}
+              src="/section.png"
               alt="NSG Mobile App Section"
               fill
               className="object-contain lg:object-cover"
@@ -99,8 +102,6 @@ export default function MoreSection() {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }
